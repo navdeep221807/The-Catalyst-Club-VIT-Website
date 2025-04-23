@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>
+        About Us - The Catalyst Club
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+        }
+        .orbitron {
+            font-family: "Orbitron", sans-serif;
+        }
+        .bubble {
+            animation: float 3s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .rotate {
+            animation: rotate 10s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="bg-white bg-opacity-90 text-gray-800 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="../homepagetest.html" class="flex items-center space-x-2">
+                    <span class="orbitron text-2xl font-extrabold tracking-widest">TCC</span>
+                </a>
+                <div class="flex space-x-6">
+                    <a class="hover:text-pink-600 transition" href="../homepagetest.html">Home</a>
+                    <a class="text-pink-600" href="#">About</a>
+                    <a class="hover:text-pink-600 transition" href="../contact/index.html">Contact</a>
+                    <a class="hover:text-pink-600 transition" href="../blog/index.html">Blog</a>
+                    <a class="hover:text-pink-600 transition" href="../newsletter/index.html">Newsletter</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="orbitron text-4xl font-bold mb-8 text-center">About The Catalyst Club</h1>
+            
+            <div class="space-y-8">
+                <section class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-8 transform hover:scale-105 transition duration-300">
+                    <div class="relative mb-8">
+                        <div class="rotate absolute inset-0 flex items-center justify-center">
+                            <div class="w-24 h-24 rounded-full border-4 border-pink-500 border-opacity-20"></div>
+                        </div>
+                        <div class="bubble relative z-10 flex justify-center">
+                            <i class="fas fa-atom text-5xl text-pink-500"></i>
+                        </div>
+                    </div>
+                    <h2 class="orbitron text-2xl font-bold mb-4 text-center">About</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        The Catalyst Club, a club for chemistry lovers. The club shall be to provide a better understanding of chemistry, to promote and improve education in chemistry, to acquaint individuals with current trends in chemistry, and to provide opportunity for individual participation and professional growth.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mt-4">
+                        Through large public demo shows and smaller interactive groups, we strive to teach individuals that chemistry is fun. Promote an interest in the field of chemistry and stimulate scientific curiosity in general; Provide assistance in the field of chemistry and encourage an atmosphere to exchange thoughts and ideas; Promote the distribution of chemical knowledge through seminars and visiting lecturers; Make available to the members details of the numerous job opportunities open in the field of chemistry; Promote the importance of chemistry and the physical sciences in everyday life.
+                    </p>
+                </section>
+
+                <div class="bg-gray-900 rounded-lg p-8 mb-8">
+                    <h2 class="orbitron text-3xl font-bold mb-6">Our Values</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg p-6 transform hover:scale-105 transition duration-300">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-graduation-cap text-3xl text-white mr-4"></i>
+                                <h3 class="orbitron text-xl font-bold">Education</h3>
+                            </div>
+                            <p class="text-white">Promoting chemistry education through interactive demonstrations and hands-on learning experiences.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg p-6 transform hover:scale-105 transition duration-300">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-flask text-3xl text-white mr-4"></i>
+                                <h3 class="orbitron text-xl font-bold">Research</h3>
+                            </div>
+                            <p class="text-white">Exploring current trends in chemistry and providing opportunities for research and experimentation.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg p-6 transform hover:scale-105 transition duration-300">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-users text-3xl text-white mr-4"></i>
+                                <h3 class="orbitron text-xl font-bold">Community</h3>
+                            </div>
+                            <p class="text-white">Building a supportive network for chemistry enthusiasts to share ideas and grow together.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg p-6 transform hover:scale-105 transition duration-300">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-briefcase text-3xl text-white mr-4"></i>
+                                <h3 class="orbitron text-xl font-bold">Career Development</h3>
+                            </div>
+                            <p class="text-white">Connecting members with career opportunities and professional growth in the field of chemistry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 

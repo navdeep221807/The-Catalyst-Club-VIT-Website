@@ -1,0 +1,26 @@
+/*
+Theme Name: The Catalyst Club
+Theme URI: 
+Author: 
+Author URI: 
+Description: A modern theme for The Catalyst Club
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tcc
+*/
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.orbitron {
+    font-family: "Orbitron", sans-serif;
+}
+
+.hero-img {
+    transform: scale(2);
+    filter: brightness(1.1);
+    margin-top: 5%;
+} 

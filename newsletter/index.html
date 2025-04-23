@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Newsletter - The Catalyst Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+        }
+        .orbitron {
+            font-family: "Orbitron", sans-serif;
+        }
+        .bubble {
+            animation: float 3s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .rotate {
+            animation: rotate 10s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="bg-white bg-opacity-90 text-gray-800 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="../homepagetest.html" class="flex items-center space-x-2">
+                    <span class="orbitron text-2xl font-extrabold tracking-widest">TCC</span>
+                </a>
+                <div class="flex space-x-6">
+                    <a class="hover:text-pink-600 transition" href="../homepagetest.html">Home</a>
+                    <a class="hover:text-pink-600 transition" href="../about/index.html">About</a>
+                    <a class="hover:text-pink-600 transition" href="../contact/index.html">Contact</a>
+                    <a class="hover:text-pink-600 transition" href="../blog/index.html">Blog</a>
+                    <a class="text-pink-600" href="#">Newsletter</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="relative mb-12">
+                <div class="rotate absolute inset-0 flex items-center justify-center">
+                    <div class="w-32 h-32 rounded-full border-4 border-pink-500 border-opacity-20"></div>
+                </div>
+                <div class="bubble relative z-10">
+                    <i class="fas fa-envelope-open-text text-7xl text-pink-500"></i>
+                </div>
+            </div>
+            
+            <h1 class="orbitron text-5xl font-bold mb-6">Stay Connected</h1>
+            
+            <div class="bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg p-10 shadow-lg transform hover:scale-105 transition duration-300">
+                <div class="flex flex-col items-center">
+                    <h2 class="orbitron text-3xl font-bold mb-4">Newsletter Coming Soon</h2>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-3 h-3 bg-white rounded-full pulse"></div>
+                        <div class="w-3 h-3 bg-white rounded-full pulse" style="animation-delay: 0.2s;"></div>
+                        <div class="w-3 h-3 bg-white rounded-full pulse" style="animation-delay: 0.4s;"></div>
+                    </div>
+                    <p class="text-white text-lg">We're brewing something special for you!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
