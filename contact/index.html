@@ -14,6 +14,28 @@
         .orbitron {
             font-family: "Orbitron", sans-serif;
         }
+        .bubble {
+            animation: float 3s ease-in-out infinite;
+        }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .rotate {
+            animation: rotate 10s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body class="bg-black text-white">
@@ -36,14 +58,22 @@
 
     <main class="container mx-auto px-4 py-16">
         <div class="max-w-4xl mx-auto">
+            <div class="relative mb-12">
+                <div class="rotate absolute inset-0 flex items-center justify-center">
+                    <div class="w-32 h-32 rounded-full border-4 border-pink-500 border-opacity-20"></div>
+                </div>
+                <div class="bubble relative z-10 text-center">
+                    <i class="fas fa-address-book text-7xl text-pink-500"></i>
+                </div>
+            </div>
             <h1 class="orbitron text-4xl font-bold mb-12 text-center">Contact Us</h1>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-900 rounded-lg p-8">
+                <div class="bg-gray-900 rounded-lg p-8 transform hover:scale-105 transition duration-300">
                     <h2 class="orbitron text-2xl font-bold mb-6">Get in Touch</h2>
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4">
-                            <div class="bg-pink-600 p-3 rounded-full">
+                            <div class="bg-pink-600 p-3 rounded-full pulse">
                                 <i class="fas fa-envelope text-white"></i>
                             </div>
                             <div>
@@ -54,11 +84,11 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-900 rounded-lg p-8">
+                <div class="bg-gray-900 rounded-lg p-8 transform hover:scale-105 transition duration-300">
                     <h2 class="orbitron text-2xl font-bold mb-6">Follow Us</h2>
                     <div class="space-y-6">
                         <div class="flex items-center space-x-4">
-                            <div class="bg-pink-600 p-3 rounded-full">
+                            <div class="bg-pink-600 p-3 rounded-full pulse">
                                 <i class="fab fa-instagram text-white"></i>
                             </div>
                             <div>
@@ -67,7 +97,7 @@
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <div class="bg-pink-600 p-3 rounded-full">
+                            <div class="bg-pink-600 p-3 rounded-full pulse" style="animation-delay: 0.2s;">
                                 <i class="fab fa-linkedin text-white"></i>
                             </div>
                             <div>
