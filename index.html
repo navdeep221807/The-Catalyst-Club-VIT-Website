@@ -16,7 +16,7 @@
             font-family: "Orbitron", sans-serif;
         }
         .hero-img {
-            transform: scale(2);
+            transform: scale(2.5);
             filter: brightness(1.1) contrast(1.1);
             margin-top: 5%;
             animation: float 6s ease-in-out infinite;
@@ -41,9 +41,9 @@
             opacity: 0;
         }
         @keyframes float {
-            0% { transform: translateY(0px) scale(2); }
-            50% { transform: translateY(-20px) scale(2); }
-            100% { transform: translateY(0px) scale(2); }
+            0% { transform: translateY(0px) scale(2.5); }
+            50% { transform: translateY(-20px) scale(2.5); }
+            100% { transform: translateY(0px) scale(2.5); }
         }
         @keyframes pulse {
             0%, 100% { opacity: 1; }
@@ -140,27 +140,34 @@
         <section class="py-20 px-4">
             <div class="container mx-auto max-w-6xl">
                 <h2 class="orbitron text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">What We Do</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div class="feature-card glass-effect rounded-xl p-8 text-center">
                         <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-flask text-2xl"></i>
+                            <i class="fas fa-graduation-cap text-2xl"></i>
                         </div>
-                        <h3 class="orbitron text-xl font-bold mb-4">Research</h3>
-                        <p class="text-gray-300">Engage in cutting-edge chemical research and innovative experiments.</p>
+                        <h3 class="orbitron text-xl font-bold mb-4">Education</h3>
+                        <p class="text-gray-300">Promoting chemistry education through interactive learning.</p>
+                    </div>
+                    <div class="feature-card glass-effect rounded-xl p-8 text-center">
+                        <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-calendar-alt text-2xl"></i>
+                        </div>
+                        <h3 class="orbitron text-xl font-bold mb-4">Events</h3>
+                        <p class="text-gray-300">Organizing workshops, seminars, and demonstrations.</p>
                     </div>
                     <div class="feature-card glass-effect rounded-xl p-8 text-center">
                         <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i class="fas fa-users text-2xl"></i>
                         </div>
                         <h3 class="orbitron text-xl font-bold mb-4">Community</h3>
-                        <p class="text-gray-300">Build a network of passionate chemistry enthusiasts and professionals.</p>
+                        <p class="text-gray-300">Building a network of chemistry enthusiasts.</p>
                     </div>
                     <div class="feature-card glass-effect rounded-xl p-8 text-center">
                         <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-lightbulb text-2xl"></i>
+                            <i class="fas fa-flask text-2xl"></i>
                         </div>
-                        <h3 class="orbitron text-xl font-bold mb-4">Innovation</h3>
-                        <p class="text-gray-300">Develop new ideas and solutions through collaborative projects.</p>
+                        <h3 class="orbitron text-xl font-bold mb-4">Research</h3>
+                        <p class="text-gray-300">Engaging in innovative chemical research.</p>
                     </div>
                 </div>
             </div>
