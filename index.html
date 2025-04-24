@@ -5,173 +5,52 @@
     <title>The Catalyst Club</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <style>
         body {
             margin: 0;
             font-family: "Roboto", sans-serif;
-            overflow-x: hidden;
         }
         .orbitron {
             font-family: "Orbitron", sans-serif;
         }
         .hero-img {
             transform: scale(2.5);
-            filter: brightness(1.1) contrast(1.1);
+            filter: brightness(1.1);
             margin-top: 5%;
-            animation: float 6s ease-in-out infinite;
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-        .pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        .rotate {
-            animation: rotate 10s linear infinite;
-        }
-        .slide-up {
-            animation: slideUp 0.8s ease-out forwards;
-            opacity: 0;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px) scale(2.5); }
-            50% { transform: translateY(-20px) scale(2.5); }
-            100% { transform: translateY(0px) scale(2.5); }
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .feature-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
 <body class="bg-black text-white">
     <header class="relative h-screen w-full overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-black to-pink-900 opacity-90 z-0"></div>
         <img src="TCC logo(1).png" alt="Catalyst Club Logo" class="absolute inset-0 w-full h-full object-contain object-center hero-img z-0"/>
-        
-        <nav class="fixed top-0 left-0 right-0 z-50 glass-effect">
-            <div class="container mx-auto px-4 py-4">
-                <div class="flex justify-between items-center">
-                    <a href="#" class="flex items-center space-x-2">
-                        <span class="orbitron text-2xl font-extrabold tracking-widest gradient-text">TCC</span>
-                    </a>
-                    <div class="hidden md:flex space-x-8">
-                        <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="#">Home</a>
-                        <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="about/index.html">About</a>
-                        <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="contact/index.html">Contact</a>
-                        <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="blog/index.html">Blog</a>
-                        <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="newsletter/index.html">Newsletter</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
         <div class="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
-            <div class="relative mb-12">
-                <div class="rotate absolute inset-0 flex items-center justify-center">
-                    <div class="w-32 h-32 rounded-full border-4 border-pink-500 border-opacity-20"></div>
-                </div>
-                <div class="flex items-center space-x-2 mb-12 slide-up" style="animation-delay: 0.2s;">
-                    <span class="orbitron text-5xl font-extrabold tracking-widest gradient-text">The</span>
-                    <span class="orbitron text-5xl font-extrabold tracking-widest gradient-text">Catalyst</span>
-                    <span class="orbitron text-5xl font-light tracking-wide gradient-text">Club</span>
-                </div>
+            <div class="flex items-center space-x-2 mb-12">
+                <span class="orbitron text-5xl font-extrabold tracking-widest text-white">The</span>
+                <span class="orbitron text-5xl font-extrabold tracking-widest text-white">Catalyst</span>
+                <span class="orbitron text-5xl font-light tracking-wide text-white">Club</span>
             </div>
-            
-            <div class="max-w-lg space-y-6 slide-up" style="animation-delay: 0.4s;">
+            <nav class="bg-white bg-opacity-90 text-gray-800 rounded-md px-8 py-3 flex flex-wrap justify-center gap-6 shadow-md text-sm font-medium mb-12">
+                <a class="hover:text-pink-600 transition" href="#">Home</a>
+                <a class="hover:text-pink-600 transition" href="about/index.html">About</a>
+                <a class="hover:text-pink-600 transition" href="contact/index.html">Contact</a>
+                <a class="hover:text-pink-600 transition" href="blog/index.html">Blog</a>
+                <a class="hover:text-pink-600 transition" href="newsletter/index.html">Newsletter</a>
+            </nav>
+            <div class="max-w-lg space-y-6">
                 <h1 class="text-3xl md:text-4xl font-light leading-relaxed">
                     Chemistry in Motion: <br/>
-                    <span class="gradient-text">Where Science Meets Innovation</span>
+                    Where Science Meets Innovation
                 </h1>
                 <p class="text-sm font-light text-gray-300">
                     The Catalyst Club is a student-driven organization dedicated to promoting chemistry education, fostering scientific curiosity, and creating opportunities for hands-on learning through interactive demonstrations and research.
                 </p>
-                <a href="about/index.html" class="inline-block bg-gradient-to-r from-pink-600 to-pink-700 text-white text-xs font-bold rounded-full px-8 py-3 tracking-widest hover:from-pink-700 hover:to-pink-800 transition duration-300 transform hover:scale-105">
+                <a href="about/index.html" class="inline-block bg-pink-600 text-white text-xs font-bold rounded-full px-8 py-3 tracking-widest hover:bg-pink-700 transition duration-300">
                     ABOUT US
                 </a>
             </div>
         </div>
     </header>
-
-    <main class="relative z-20">
-        <section class="py-20 px-4">
-            <div class="container mx-auto max-w-6xl">
-                <h2 class="orbitron text-3xl md:text-4xl font-bold text-center mb-16 gradient-text">What We Do</h2>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="feature-card glass-effect rounded-xl p-8 text-center">
-                        <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-graduation-cap text-2xl"></i>
-                        </div>
-                        <h3 class="orbitron text-xl font-bold mb-4">Education</h3>
-                        <p class="text-gray-300">Promoting chemistry education through interactive learning.</p>
-                    </div>
-                    <div class="feature-card glass-effect rounded-xl p-8 text-center">
-                        <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-calendar-alt text-2xl"></i>
-                        </div>
-                        <h3 class="orbitron text-xl font-bold mb-4">Events</h3>
-                        <p class="text-gray-300">Organizing workshops, seminars, and demonstrations.</p>
-                    </div>
-                    <div class="feature-card glass-effect rounded-xl p-8 text-center">
-                        <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-users text-2xl"></i>
-                        </div>
-                        <h3 class="orbitron text-xl font-bold mb-4">Community</h3>
-                        <p class="text-gray-300">Building a network of chemistry enthusiasts.</p>
-                    </div>
-                    <div class="feature-card glass-effect rounded-xl p-8 text-center">
-                        <div class="bg-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-flask text-2xl"></i>
-                        </div>
-                        <h3 class="orbitron text-xl font-bold mb-4">Research</h3>
-                        <p class="text-gray-300">Engaging in innovative chemical research.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 </body>
 </html>
