@@ -46,6 +46,26 @@
             background-clip: text;
             color: transparent;
         }
+        .island-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .island-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
     </style>
 </head>
 <body class="bg-black text-white">
@@ -89,5 +109,48 @@
             </div>
         </div>
     </header>
+
+    <section class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="orbitron text-3xl font-bold text-center gradient-text mb-16">Our Pillars</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Education Island -->
+                <div class="island-card rounded-lg p-8 text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-graduation-cap text-3xl text-white"></i>
+                    </div>
+                    <h3 class="orbitron text-xl font-bold mb-4 gradient-text">Education</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        We provide hands-on learning experiences through workshops, lab sessions, and interactive demonstrations. Our goal is to make chemistry accessible and engaging for all students, regardless of their background.
+                    </p>
+                </div>
+
+                <!-- Community Island -->
+                <div class="island-card rounded-lg p-8 text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-users text-3xl text-white"></i>
+                    </div>
+                    <h3 class="orbitron text-xl font-bold mb-4 gradient-text">Community</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Join a vibrant community of chemistry enthusiasts. We foster collaboration, mentorship, and networking opportunities among students, faculty, and industry professionals.
+                    </p>
+                </div>
+
+                <!-- Events Island -->
+                <div class="island-card rounded-lg p-8 text-center">
+                    <div class="icon-circle">
+                        <i class="fas fa-calendar-alt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="orbitron text-xl font-bold mb-4 gradient-text">Events</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Through large public demo shows and smaller interactive groups, we strive to teach individuals that chemistry is fun. We promote an interest in the field of chemistry and stimulate scientific curiosity in general.
+                    </p>
+                    <p class="text-gray-300 text-sm leading-relaxed mt-4">
+                        We provide assistance in the field of chemistry and encourage an atmosphere to exchange thoughts and ideas. Our events include seminars, visiting lecturers, and information about numerous job opportunities in chemistry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
