@@ -88,7 +88,22 @@
                 <a href="../index.html" class="flex items-center space-x-2">
                     <span class="orbitron text-2xl font-extrabold tracking-widest gradient-text">TCC</span>
                 </a>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <!-- Desktop menu -->
                 <div class="hidden md:flex space-x-8">
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../index.html">Home</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../about/index.html">About</a>
+                    <a class="nav-link text-sm font-medium text-pink-500" href="#">Contact</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../blog/index.html">Blog</a>
+                    <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../newsletter/index.html">Newsletter</a>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 pt-4 pb-2">
                     <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../index.html">Home</a>
                     <a class="nav-link text-sm font-medium hover:text-pink-500 transition" href="../about/index.html">About</a>
                     <a class="nav-link text-sm font-medium text-pink-500" href="#">Contact</a>
@@ -168,5 +183,14 @@
             </div>
         </div>
     </main>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html> 
